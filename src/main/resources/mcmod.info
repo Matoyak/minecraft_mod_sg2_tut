@@ -1,0 +1,14 @@
+[{
+    "modid": "suppergerrie_tut",
+    "name": "Supper Gerrie Tutorial Mod",
+    "description": "Basic mod to learn how to mod, following the tutorials given at https://suppergerrie2.com/minecraft-1-12-modding-with-forge-2-main-mod-class/",
+    "version": "0.1",
+    "mcversion": "${mcversion}",
+    "url": "",
+    "updateUrl": "",
+    "authorList": ["Matoyak"],
+    "credits": "Suppergerrie2's tutorial!",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": []
+}]
