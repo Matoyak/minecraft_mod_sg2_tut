@@ -1,7 +1,10 @@
 package com.matoyak.suppergerrie;
 
+import com.matoyak.suppergerrie.init.ModItems;
 
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.common.Mod.EventHandler;
+import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -12,20 +15,22 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 		version = Reference.VERSION,
 		acceptedMinecraftVersions = Reference.ACCEPTED_MINECRAFT_VERSIONS)
 public class SupperGerrie {
-	@Mod.Instance
+	@Instance
 	public static SupperGerrie instance;
 
-	@Mod.EventHandler
+	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
-		System.out.println(Reference.MODID + ":preInit");
+		System.out.println("Starting preInit: " + Reference.MODID + " :preInit");
+		ModItems.init();
+		System.out.println("Ending preInit: " + Reference.MODID + " :preInit");
 	}
 
-	@Mod.EventHandler
+	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		System.out.println(Reference.MODID + ":init");
 	}
 
-	@Mod.EventHandler
+	@EventHandler
 	public void postInit(FMLPostInitializationEvent event) {
 		System.out.println(Reference.MODID + ":postInit");
 	}
